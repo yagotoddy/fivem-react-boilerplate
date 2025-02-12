@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { MutableRefObject, useEffect, useRef } from "react";
 import { isEnvBrowser, noop } from "@/utils/misc";
 

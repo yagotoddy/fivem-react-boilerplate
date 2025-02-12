@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { isEnvBrowser } from "@/utils/misc";
 
 export class Post<T = unknown> {

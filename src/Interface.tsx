@@ -3,9 +3,9 @@ import { listen } from "./hooks/listen"
 import { observe } from "./hooks/observe"
 import { useVisibilityStore } from "./stores/visibility"
 import { Post } from "./hooks/post"
-import clsx from "clsx"
 import { isEnvBrowser } from "./utils/misc"
 import './debug.ts'
+import { cn } from "./utils/cn.ts"
 
 const Interface = () => {
   const { visible,setVisible } = useVisibilityStore()
@@ -14,11 +14,9 @@ const Interface = () => {
 
   return (
     <div
-      className={clsx(
+      className={cn(
         "h-screen flex items-center justify-center",
-        {
-          "bg-slate-500": isEnvBrowser()
-        }
+        isEnvBrowser() && "bg-slate-500"
       )}
       style={{
         visibility: visible ? "visible" : "hidden"
